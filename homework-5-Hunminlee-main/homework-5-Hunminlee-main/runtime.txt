@@ -1,8 +1,0 @@
-For each of the questions below, be sure to define n and explain your answer.
-
-1. What is the runtime of getNeighbors?   runtime : O(n), where n : matrix length
-
-2. What's the runtime of canColor?  O(n*m) where n : number of vertices, m : number of neighbors of each node
-
-3. What's the runtime of canColor2?    O(n*m) where n : number of vertices, m : number of neighbors of each node
-
