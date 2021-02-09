@@ -1,0 +1,79 @@
+1. What does the corresponding adjacency list look like? Be sure to follow
+the format from README.md. We have provided a template to get you started.
+
+== START LIST ==
+0: [(5, 2)]
+1: [(2, 14), (5, 13), (6, 15)]
+2: [(1, 14), (3, 11), (4, 4), (5, 10), (6, 8)]
+3: [(2, 11), (5, 2)]
+4: [(2, 4), (5, 3)]
+5: [(0, 2), (1, 13), (2, 10), (3, 2), (4, 3), (6, 6)]
+6: [(1, 15), (2, 8), (5, 6)]
+== END LIST ==
+
+2. Your graph drawing should be in "graph.png"
+
+3. List out how dist changes as run Dijkstra's on your graph. The first row
+should be the initialization. The second row should be setting the source to 0.
+Each new row afterwards represents what dist looks like after examining a
+neighbor. We have provided a template to get you started.
+
+== START DIST ==
+[inf, inf, inf, inf, inf, inf, inf] 
+[0, inf, inf, inf, inf, inf, inf] 
+[0, inf, inf, inf, inf, 2, inf]  //0-5
+[0, inf, inf, inf, inf, 2, inf]  //5-0
+[0, 15, inf, inf, inf, 2, inf]   //5-1
+[0, 15, 12, inf, inf, 2, inf]    //5-2
+[0, 15, 12, 4, inf, 2, inf]      //5-3
+[0, 15, 12, 4, 5, 2, inf]        //5-4
+[0, 15, 12, 4, 5, 2, 8]          //5-6
+[0, 15, 12, 4, 5, 2, 8]          //3-2
+[0, 15, 12, 4, 5, 2, 8]          //3-5
+[0, 15, 9, 4, 5, 2, 8]           //4-2
+[0, 15, 9, 4, 5, 2, 8]           //4-5
+[0, 15, 9, 4, 5, 2, 8]           //6-1
+[0, 15, 9, 4, 5, 2, 8]           //6-2
+[0, 15, 9, 4, 5, 2, 8]           //6-5
+[0, 15, 9, 4, 5, 2, 8]           //2-1
+[0, 15, 9, 4, 5, 2, 8]           //2-3
+[0, 15, 9, 4, 5, 2, 8]           //2-4
+[0, 15, 9, 4, 5, 2, 8]           //2-5
+[0, 15, 9, 4, 5, 2, 8]           //2-6
+[0, 15, 9, 4, 5, 2, 8]           //1-2
+[0, 15, 9, 4, 5, 2, 8]           //1-5
+[0, 15, 9, 4, 5, 2, 8]           //1-6
+
+== END DIST ==
+
+4. List out how prev changes as run Dijkstra's on your graph. The first row
+should be the initialization.  Each new row afterwards represents what dist
+looks like after examining a neighbor. We have provided a template to get you
+started.
+
+=
+== START PREV ==
+[null, null, null, null, null, null, null]
+[null, null, null, null, null, 0, null] //0-5
+[null, null, null, null, null, 0, null] //5-0
+[null, 5, null, null, null, 0, null] //5-1
+[null, 5, 5, null, null, 0, null] //5-2
+[null, 5, 5, 5, null, 0, null] //5-3
+[null, 5, 5, 5, 5, 0, null] //5-4
+[null, 5, 5, 5, 5, 0, 5] //5-6
+[null, 5, 5, 5, 5, 0, 5] //3-2
+[null, 5, 5, 5, 5, 0, 5] //3-5
+[null, 5, 4, 5, 5, 0, 5] //4-2
+[null, 5, 4, 5, 5, 0, 5] //4-5
+[null, 5, 4, 5, 5, 0, 5] //6-1
+[null, 5, 4, 5, 5, 0, 5] //6-2
+[null, 5, 4, 5, 5, 0, 5] //6-5
+[null, 5, 4, 5, 5, 0, 5] //2-1
+[null, 5, 4, 5, 5, 0, 5] //2-3
+[null, 5, 4, 5, 5, 0, 5] //2-4
+[null, 5, 4, 5, 5, 0, 5] //2-5
+[null, 5, 4, 5, 5, 0, 5] //2-6
+[null, 5, 4, 5, 5, 0, 5] //1-2
+[null, 5, 4, 5, 5, 0, 5] //1-5
+[null, 5, 4, 5, 5, 0, 5] //1-
+== END PREV ==
