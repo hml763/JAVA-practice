@@ -1,0 +1,8 @@
+Q2. What is the worst case runtime of candidate? Be sure to define N and
+justify your answer.
+
+For me, the answer was O(N*M + P)
+
+N : Number of letters inside prefix  E.g. candidates(example, "c") = 1, candidates(example, "ca") = 2
+M : Number of tree level nodes(=m) of s th number of prefix  E.g. prefix[0] = level 0, prefix[1] = level 1
+P :  The number of nodes at the last level of the tree
